@@ -56,5 +56,11 @@ class UserSeeder extends Seeder
                 'email' => 'ig@test.test',
                 'password' => bcrypt('password'),
         ]);
+        User::create([
+            'id' => '9',
+            'name' => 'Daniel Tankink',
+            'email' => 'ps220695@summacollege.nl',
+            'password' => bcrypt('password'),
+        ]);
     }
 }

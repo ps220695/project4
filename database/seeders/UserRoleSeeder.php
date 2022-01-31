@@ -23,6 +23,7 @@ class UserRoleSeeder extends Seeder
             ['user_id' => 6, 'role_id' => 1],
             ['user_id' => 7, 'role_id' => 1],
             ['user_id' => 8, 'role_id' => 1],
+            ['user_id' => 9, 'role_id' => 999],
         ];
 
         foreach ($userRoles as $userRole) {
