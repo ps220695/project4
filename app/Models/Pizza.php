@@ -21,5 +21,5 @@ class Pizza extends Model
      *
      * @var string[]
      */
-    protected $fillable = ['name', 'price'];
+    protected $fillable = ['name'];
 }
