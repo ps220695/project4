@@ -14,12 +14,21 @@ class Pizza extends Model
      *
      * @var string
      */
-    public $table = "pizza";
+    protected $table = 'pizza';
+    public $timestamps = false;
+    protected $fillable =
+        [
+            'id',
+            'name',
+        ];
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
-    protected $fillable = ['name', 'price'];
+    public function ingredienten()
+    {
+        return $this->belongsToMany(Ingredient::class);
+    }
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
+
 }

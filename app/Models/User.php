@@ -43,6 +43,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+
     // ************************************************************************
     // DUJO
     // 17-12-2021
@@ -70,5 +72,10 @@ class User extends Authenticatable
             return $userRole->count() > 0;
         }
     }
+
     // ************************************************************************
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
 }

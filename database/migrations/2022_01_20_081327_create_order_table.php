@@ -20,6 +20,9 @@ class CreateOrderTable extends Migration
             $table->string('address');
             $table->string('zipcode');
             $table->integer('phone');
+            $table->unsignedBigInteger("status_id")->nullable();
+            $table->foreign('status_id')->references('id')->on('states');
+
         });
     }
 
