@@ -13,13 +13,13 @@ class CreatePizzaIngredientTable extends Migration
      */
     public function up()
     {
-        Schema::create('ingredient_pizza', function (Blueprint $table) {
 
-            $table->unsignedBigInteger('pizza_id');
-            $table->unsignedBigInteger('ingredient_id');
-            $table->foreign('pizza_id')->references('id')->on('pizza');
-            $table->foreign('ingredient_id')->references('id')->on('ingredienten');
-            $table->primary(['pizza_id','ingredient_id']);
+        Schema::create('pizza_ingredient', function (Blueprint $table) {
+            $table->id();
+            $table->integer('pizzaId');
+            $table->integer('ingredient')->references('id')->on('ingredienten');
+            $table->integer('prijs');
+
         });
     }
 
@@ -30,6 +30,9 @@ class CreatePizzaIngredientTable extends Migration
      */
     public function down()
     {
+
+        return $this->hasMany(\App\Models\Pizza::class);
+        return $this->hasMany(\App\Models\Ingredient::class);
         Schema::dropIfExists('pizza_ingredient');
 
     }

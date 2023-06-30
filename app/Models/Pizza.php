@@ -30,5 +30,4 @@ class Pizza extends Model
     {
         return $this->belongsToMany(Order::class);
     }
-
 }

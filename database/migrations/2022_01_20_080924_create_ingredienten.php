@@ -18,6 +18,7 @@ class CreateIngredienten extends Migration
             $table->string('name');
             $table->decimal('price', $precision = 5, $scale = 2);
             $table->integer('aantal')->lenght(2);
+
         });
     }
 

@@ -9,6 +9,7 @@ class Ingredient extends Model
 {
     use HasFactory;
 
+
     protected $table = 'ingredienten';
     public $timestamps = false;
 
@@ -16,4 +17,6 @@ class Ingredient extends Model
     {
         return $this->belongsToMany(Pizza::class);
     }
+
+
 }

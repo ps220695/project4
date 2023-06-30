@@ -5,7 +5,8 @@ namespace Database\Seeders;
 use App\Models\Pizza;
 use Illuminate\Database\Seeder;
 
-class pizzaSeeder extends Seeder
+
+class PizzaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -45,7 +46,11 @@ class pizzaSeeder extends Seeder
 
         ]);
         Pizza::create([
+
             'id'=> '7',
+
+
+
             'name' => 'diavolo',
 
         ]);

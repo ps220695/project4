@@ -33,7 +33,9 @@ class IngredientSeeder extends Seeder
             'aantal' => '100'
         ]);
         Ingredient::create([
+
             'id'=> '4',
+
             'name' => 'tonijn',
             'price' => '0.33',
             'aantal' => '10'
